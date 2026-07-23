@@ -1,0 +1,17 @@
+.pending-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(201, 162, 75, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4);
+}
+
+.pending-icon-rejected {
+  background: rgba(156, 59, 59, 0.1);
+  color: var(--color-danger);
+  font-size: var(--text-xl);
+  font-weight: 700;
+}

@@ -1,0 +1,74 @@
+.doc-section {
+  margin-bottom: var(--space-6);
+}
+
+.doc-section-title {
+  font-size: var(--text-md);
+  margin-bottom: var(--space-3);
+  color: var(--text-primary);
+}
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-3);
+}
+
+.doc-tile {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: left;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.doc-tile:hover {
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.doc-tile-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: rgba(11, 61, 46, 0.08);
+  color: var(--color-emerald-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+[data-theme='dark'] .doc-tile-icon { color: var(--color-gold-soft); background: rgba(201, 162, 75, 0.1); }
+
+.doc-tile-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.doc-tile-label {
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+.doc-tile-status {
+  font-size: var(--text-xs);
+  color: var(--color-faint);
+  margin-top: 2px;
+}
+
+.doc-tile-saved {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-success);
+}
+
+.doc-tile-chevron {
+  color: var(--color-faint);
+  flex-shrink: 0;
+}

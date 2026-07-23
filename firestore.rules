@@ -1,0 +1,45 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAdmin() {
+      return exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+    function isApproved() {
+      return exists(/databases/$(database)/documents/accessRequests/$(request.auth.uid))
+        && get(/databases/$(database)/documents/accessRequests/$(request.auth.uid)).data.status == 'approved';
+    }
+
+    // Own profile only
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Admin record: readable by signed-in users (needed to resolve the shared
+    // planner and to detect first-user-becomes-admin); writable only by its owner.
+    match /admins/{adminId} {
+      allow read: if request.auth != null;
+      allow create, update: if request.auth != null && request.auth.uid == adminId;
+    }
+
+    // Access requests: a user creates and reads their own request with status
+    // 'pending' only; ONLY the admin can change status (approve/reject/revoke).
+    match /accessRequests/{requestId} {
+      allow create: if request.auth != null
+        && request.auth.uid == requestId
+        && request.resource.data.status == 'pending';
+      allow read: if request.auth != null
+        && (request.auth.uid == requestId || isAdmin());
+      allow update, delete: if request.auth != null && isAdmin();
+    }
+
+    // Planner: readable by signed-in users (the ID is long and unguessable,
+    // and reading is required to validate an entered ID before requesting
+    // access). Writing requires admin or an approved request.
+    match /planners/{plannerId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null && isAdmin();
+      allow update, delete: if request.auth != null && (isAdmin() || isApproved());
+    }
+  }
+}

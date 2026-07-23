@@ -1,0 +1,30 @@
+export const SCHEDULE_TEMPLATE = [
+  { activity: 'Hair & makeup begins', owner: 'Bridal party' },
+  { activity: 'Groom & groomsmen prepare', owner: "Groom's party" },
+  { activity: 'Photographer arrives for getting-ready shots', owner: 'Photographer' },
+  { activity: 'Bridal party departs for venue', owner: 'Bridal party' },
+  { activity: 'Groom & groomsmen arrive at venue', owner: "Groom's party" },
+  { activity: 'Guests begin arriving', owner: 'Ushers' },
+  { activity: 'Ceremony begins', owner: 'Officiant' },
+  { activity: 'Ceremony ends; photographs', owner: 'Photographer' },
+  { activity: 'Guests transition to reception', owner: 'All' },
+  { activity: 'Reception entrance', owner: 'MC' },
+  { activity: 'Meal service begins', owner: 'Caterer' },
+  { activity: 'Speeches', owner: 'MC' },
+  { activity: 'Cake cutting & first dance', owner: 'Couple' },
+  { activity: 'Open dancing', owner: 'DJ' },
+  { activity: 'Send-off', owner: 'All' },
+];
+
+export const RESPONSIBILITIES_TEMPLATE = [
+  { task: 'Hold the rings until the ceremony', owner: '' },
+  { task: "Manage the couple's overnight bag", owner: '' },
+  { task: 'Collect and safeguard gift envelopes', owner: '' },
+  { task: 'Coordinate with the venue on setup time', owner: '' },
+  { task: 'Confirm vendor arrivals (caterer, DJ, decorator, photographer)', owner: '' },
+  { task: 'Manage the guestbook / sign-in table', owner: '' },
+  { task: 'Keep the timeline on track and cue the MC', owner: '' },
+  { task: 'Handle any walk-in or uninvited guest issues', owner: '' },
+  { task: 'Settle final vendor balances on the day', owner: '' },
+  { task: 'Be the point of contact for emergencies', owner: '' },
+];

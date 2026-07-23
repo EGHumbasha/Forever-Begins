@@ -1,0 +1,196 @@
+.vendor-summary-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+@media (max-width: 900px) {
+  .vendor-summary-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+.vendor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-4);
+}
+
+.vendor-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.vendor-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.vendor-category-tag {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-gold);
+  font-weight: 700;
+}
+
+.vendor-name {
+  font-size: var(--text-md);
+  margin-top: var(--space-1);
+}
+
+.vendor-status {
+  flex-shrink: 0;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.vendor-status-considering { background: rgba(122, 116, 104, 0.12); color: var(--text-secondary); }
+.vendor-status-contacted { background: rgba(59, 106, 140, 0.12); color: var(--color-info); }
+.vendor-status-booked { background: rgba(184, 118, 46, 0.12); color: var(--color-warning); }
+.vendor-status-paid { background: rgba(47, 107, 79, 0.12); color: var(--color-success); }
+.vendor-status-completed { background: rgba(11, 61, 46, 0.14); color: var(--color-emerald-deep); }
+[data-theme='dark'] .vendor-status-completed { color: var(--color-gold-soft); }
+
+.vendor-rating {
+  display: flex;
+  gap: 2px;
+}
+
+.vendor-contact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.vendor-contact-row span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.vendor-cost-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--border-default);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.vendor-cost-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.vendor-cost-value {
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+
+.vendor-contract-tag {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.vendor-notes {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.vendor-card-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: auto;
+}
+
+.vendor-card-actions .btn {
+  flex: 1;
+}
+
+.vendor-checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-top: var(--space-5);
+}
+
+.vendor-cost-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--border-default);
+}
+
+@media (max-width: 560px) {
+  .vendor-cost-summary { grid-template-columns: repeat(2, 1fr); }
+}
+
+.payment-schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.payment-schedule-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--bg-app);
+}
+
+.payment-schedule-paid {
+  opacity: 0.55;
+}
+
+.payment-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-ink);
+}
+
+.payment-check-done {
+  background: var(--color-gold);
+}
+
+.payment-schedule-info {
+  flex: 1;
+}
+
+.payment-schedule-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: var(--space-2);
+}
+
+@media (max-width: 560px) {
+  .payment-schedule-form { grid-template-columns: 1fr; }
+}

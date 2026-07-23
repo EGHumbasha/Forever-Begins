@@ -1,0 +1,15 @@
+export const PACKING_TEMPLATE = [
+  { name: 'Passports / travel documents' },
+  { name: 'Travel insurance documents' },
+  { name: 'Flight/booking confirmations' },
+  { name: 'Cash & cards (notify your bank of travel)' },
+  { name: 'Phone charger & adapter' },
+  { name: 'Toiletries bag' },
+  { name: 'Sunscreen' },
+  { name: 'Comfortable shoes' },
+  { name: 'Swimwear' },
+  { name: 'A few formal/dinner outfits' },
+  { name: 'Camera' },
+  { name: 'Medication / first-aid basics' },
+  { name: 'Reusable water bottle' },
+];

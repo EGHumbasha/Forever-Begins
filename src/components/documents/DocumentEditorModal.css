@@ -1,0 +1,75 @@
+.doc-editor-hint {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+  line-height: 1.5;
+}
+
+.doc-text-editor {
+  font-family: 'Georgia', serif;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  white-space: pre-wrap;
+  resize: vertical;
+  min-height: 320px;
+}
+
+.doc-list-editor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-height: 440px;
+  overflow-y: auto;
+  padding-right: var(--space-1);
+}
+
+.doc-list-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--bg-app);
+}
+
+.doc-list-index {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--color-gold);
+  margin-top: 6px;
+}
+
+.doc-list-side-field {
+  width: 90px;
+  flex-shrink: 0;
+  font-size: var(--text-xs);
+}
+
+.doc-list-main-field {
+  flex: 1;
+  font-size: var(--text-sm);
+}
+
+.doc-list-remove {
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.doc-editor-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-default);
+}
+
+.doc-editor-actions .btn-primary {
+  margin-left: auto;
+}
